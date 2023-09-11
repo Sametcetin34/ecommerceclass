@@ -128,7 +128,7 @@ header {
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.5);
         //translate anchorda nasılsa öyle kabul ediliyor. 
-        transform: translateX();
+        transform: translateX(100%);
         transition: all 0.3s;
       }
 
@@ -160,18 +160,18 @@ header {
       .header-right {
         display: block;
         .cart {
-          // display: block;
-          // padding: 5px 0;
+          display: block;
+          padding: 5px 0;
           border-bottom: 1px solid #333;
-          // a {
-          //   position: relative;
-          //   p {
-          //     position: absolute;
-          //     top: -1rem;
-          //     left: 5rem;
-          //     font-weight: 500;
-          //   }
-          // }
+          a {
+            position: relative;
+            p {
+              position: absolute;
+              top: -1rem;
+              left: 5rem;
+              font-weight: 500;
+            }
+          }
         }
 
         .links {

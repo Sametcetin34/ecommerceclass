@@ -1,4 +1,4 @@
-////slider data bilgileri
+//slider data bilgileri
 export const sliderData = [
     {
       image: "https://i.ibb.co/CBGRLhG/bg-4.jpg",
