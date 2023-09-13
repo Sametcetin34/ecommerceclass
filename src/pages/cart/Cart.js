@@ -81,7 +81,7 @@ const Cart = () => {
                       <td>{index + 1}</td>
                       <td>
                         <p>
-                          <h>{name}</h>
+                          <span>{name}</span>
                         </p>
                         <img src={imageURL} alt={name} style={{ width: "100px" }} />
                       </td>

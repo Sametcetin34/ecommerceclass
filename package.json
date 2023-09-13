@@ -1,4 +1,5 @@
 {
+  "proxy":"https://ecommerce-class-backend-1-dtk5.onrender.com",
   "name": "e-commerce-app",
   "version": "0.1.0",
   "private": true,

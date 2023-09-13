@@ -30,14 +30,15 @@ const Checkout = () => {
   const dispatch=useDispatch();
   
   useEffect(()=>{
-    dispatch(CALCULATE_SUBTOTAL);
-    dispatch(CALCULATE_TOTAL_QUANTITY);
+    dispatch(CALCULATE_SUBTOTAL());
+    dispatch(CALCULATE_TOTAL_QUANTITY());
   },[dispatch,cartItems])
 
   const description=`eShop payment: email:${customerEmail}, Amount:${totalAmount}`
 
   useEffect(()=>{
     fetch("https://ecommerce-class-backend-1-dtk5.onrender.com/create-payment-intent",{
+    
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({

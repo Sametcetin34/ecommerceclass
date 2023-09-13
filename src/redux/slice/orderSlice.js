@@ -1,4 +1,4 @@
-//// order (sipariş) miktarı ve durumlarının yönetldiği redux
+// order (sipariş) miktarı ve durumlarının yönetldiği redux
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
@@ -8,7 +8,9 @@ const initialState = {
 const orderSlice = createSlice({
   name: second,
   initialState,
-  reducers: {}
+  reducers: {
+    
+  }
 });
 
 export const {} = orderSlice.actions

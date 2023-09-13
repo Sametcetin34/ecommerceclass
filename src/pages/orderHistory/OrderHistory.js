@@ -1,4 +1,4 @@
-//// my orders kısmına tıkladığınızda karşınıza çıkan sayfadır. 
+// my orders kısmına tıkladığınızda karşınıza çıkan sayfadır. 
 import React from 'react'
 
 const OrderHistory = () => {
