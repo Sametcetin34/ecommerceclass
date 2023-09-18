@@ -4,8 +4,8 @@ import styles from "./OrderDetails.module.scss"
 import spinnerImg from "../../../assets/spinner.gif"
 import { Link, useParams } from 'react-router-dom'
 import useFetchDocument from '../../../customHooks/useFetchDocument'
-import { STORE_PRODUCTS } from '../../../redux/slice/productSlice'
-import { useDispatch } from 'react-redux'
+import { STORE_PRODUCTS, selectProducts } from '../../../redux/slice/productSlice'
+import { useDispatch, useSelector } from 'react-redux'
 import useFetchCollection from '../../../customHooks/useFetchCollection'
 
 import ChangeOrderStatus from '../changeOrderStatus/ChangeOrderStatus'
@@ -18,16 +18,16 @@ const OrderDetails = () => {
   const document=useFetchDocument("orders",id);
   const dispatch= useDispatch();
   const{data}=useFetchCollection("products");
-
+  const products=useSelector(selectProducts)
   
 
   useEffect(()=>{
     setOrder(document)
   },[document])
+  
   useEffect(()=>{
-    dispatch(STORE_PRODUCTS({data}))
-    
-  },[dispatch,data,document])
+    dispatch(STORE_PRODUCTS({products:data}))
+  },[dispatch,data])
 
 
  
@@ -64,7 +64,7 @@ const OrderDetails = () => {
           {
             order.cartItems.map((data,index)=>{
               const{id,name,price,imageURL,cartQuantity}= data
-            //  console.log(imageURL)
+           
               return (
                 <tr key={id}>
                   <td>
@@ -74,7 +74,7 @@ const OrderDetails = () => {
                     <p>
                       <b>{name}</b>
                     </p>
-                    <img src={imageURL} alt={name} style={{width:"100px"}} />
+                    <img src={products.imageURL} alt={name} style={{width:"100px"}} />
                   </td>
                   <td>{price}</td>
                   <td>{cartQuantity}</td>

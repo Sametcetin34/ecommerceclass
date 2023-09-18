@@ -105,6 +105,8 @@ catch(error){
           <tbody>
             {currentProducts.map((product,index)=>{
               const {id,name,price,imageURL,category}=product
+
+             
             
               
               return(
@@ -114,6 +116,7 @@ catch(error){
                   </td>
                   <td>
                     <img src={imageURL} alt={name} style={{width:"100px"}}/>
+                   
                   </td>
                   <td>
                     {name}
