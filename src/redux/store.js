@@ -5,6 +5,7 @@ import productReducer from "./slice/productSlice"
  import filterReducer from "./slice/filterSlice"
  import cartReducer from "./slice/cartSlice"
  import checkoutReducer from "./slice/checkoutSlice"
+ import orderReducer from "./slice/orderSlice"
 
 //Reducerlarımızı eklediğimiz yer
 
@@ -13,7 +14,8 @@ import productReducer from "./slice/productSlice"
    product:productReducer,
    filter:filterReducer,
    cart:cartReducer,
-   checkout:checkoutReducer
+   checkout:checkoutReducer,
+   orders:orderReducer
  })
 
  //Reducerlar stora kaydediliyor

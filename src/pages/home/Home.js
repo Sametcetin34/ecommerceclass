@@ -5,10 +5,10 @@ import Product from '../../components/product/Product'
 import  { useEffect } from 'react'
 
 const Home = () => {
-  const url=window.location.href
+  const url = window.location.href
 
   useEffect(()=>{
-    const scrollProducts=()=>{
+    const scrollProducts = () => {
       if(url.includes("#products")){
         window.scrollTo({
           top:700,
@@ -23,7 +23,7 @@ const Home = () => {
     <div>
       <Slider/>
       <Product/>
-      </div>
+    </div>
   )
 }
 
